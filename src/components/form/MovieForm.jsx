@@ -17,10 +17,10 @@ const MovieForm = ({ onSubmit, defaultEditValues }) => {
     releaseDate: "",
   };
 
-  const [stooge, setStooge] = useState(null);
+  const [genre, setGenre] = useState(null);
 
   const handleChange = (event) => {
-    setStooge(event.target.value);
+    setGenre(event.target.value);
   };
   const movieFormSchema = yup.object().shape({
     name: yup.string().required("You need to add a name"),
@@ -105,7 +105,7 @@ const MovieForm = ({ onSubmit, defaultEditValues }) => {
                 <InputLabel>Genre</InputLabel>
                 <Select
                   onChange={handleChange}
-                  value={stooge}
+                  value={genre}
                   {...field}
                   label="Genre"
                   variant="outlined"
