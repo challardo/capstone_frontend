@@ -24,8 +24,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "npm test -- --coverage --verbose --watchAll=false",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/"
+    ]
   },
   "eslintConfig": {
     "extends": [
