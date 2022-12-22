@@ -1,5 +1,5 @@
-import { Fragment, useEffect, useState } from "react";
-import { Grid } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Typography } from "@mui/material";
 import { deleteMovie, getMovies, updateMovie } from "../../api/moviesApi";
 import AdminMovieList from "../movie/AdminMovieList";
 import { saveMovie } from "../../api/moviesApi";
@@ -39,9 +39,12 @@ const AdminPage = () => {
       setMovies((prev) => prev.filter((movie) => movie._id !== id));
     }
   };
+
   return (
     <>
-      <h1 style={{ textAllign: "center" }}>Admin page</h1>
+      <Typography textAlign="center" variant="h3">
+        Admin page
+      </Typography>
       <AdminMovieList
         movies={movies}
         handleSubmit={handleSubmit}

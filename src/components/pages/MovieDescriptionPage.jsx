@@ -1,5 +1,5 @@
-import { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Typography } from "@mui/material";
 import { useMovie } from "../../Hooks/useMovies";
 import MovieDescription from "../movie/MovieDescription";
 
@@ -10,7 +10,9 @@ const MovieDescriptionPage = () => {
   return (
     <>
       {loading ? (
-        <h1> Loading content...</h1>
+        <Typography textAlign="center" variant="p">
+          Loading content...
+        </Typography>
       ) : (
         <MovieDescription movie={movie} />
       )}

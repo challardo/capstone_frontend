@@ -1,5 +1,5 @@
-import { Fragment, useEffect, useState } from "react";
-import { Grid } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Grid, Typography } from "@mui/material";
 import { getMovies } from "../../api/moviesApi";
 import FavoriteMovieList from "../movie/FavoriteMovieList";
 
@@ -16,10 +16,14 @@ const FavoritesPage = () => {
   }, []);
 
   return (
-    <Grid container sx={{ m: 1 }}>
-      <h1>Favorites</h1>
-      <FavoriteMovieList movies={movies} />
-    </Grid>
+    <>
+      <Typography textAlign="center" variant="h3">
+        Favorite
+      </Typography>
+      <Grid container sx={{ m: 1 }}>
+        <FavoriteMovieList movies={movies} />
+      </Grid>
+    </>
   );
 };
 

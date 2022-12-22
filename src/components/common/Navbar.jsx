@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
+import { School } from "@mui/icons-material";
 
 import { Link } from "react-router-dom";
 
@@ -30,7 +31,8 @@ const Navbar = () => {
               display: { xs: "none", md: "flex" },
             }}
           >
-            Capstone
+            <School />
+            _CAPSTONE
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton

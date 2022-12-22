@@ -40,6 +40,7 @@ const MovieDescription = ({ movie }) => {
               {movie?.name}
             </Typography>
             <Typography
+              textAlign="justify"
               variant="subtitle1"
               color="text.secondary"
               component="div"

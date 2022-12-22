@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import MovieItem from "./MovieItem";
 
 const FavoriteMovieList = ({ movies }) => {
@@ -6,7 +6,7 @@ const FavoriteMovieList = ({ movies }) => {
     return null;
   }
   return (
-    <Grid container>
+    <Grid container justifyContent="center" spacing={2}>
       {movies.map((movie) => {
         return movie?.favorite && <MovieItem key={movie._id} movie={movie} />;
       })}

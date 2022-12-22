@@ -6,7 +6,7 @@ const MovieList = ({ movies }) => {
     return null;
   }
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} justifyContent="center">
       {movies.map((movie) => {
         return <MovieItem key={movie._id} movie={movie} />;
       })}
